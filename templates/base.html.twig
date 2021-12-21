@@ -11,9 +11,10 @@
         <meta name="Revisit-After" content="15 days">
         <title>{% block titre_page %}GInfo{% endblock %}</title>
         <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
-        <link rel="stylesheet" href="{{ asset('build/vendor.css') }}" />
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}" />
         {% block page_css %}
+        {% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">

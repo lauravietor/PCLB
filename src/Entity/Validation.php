@@ -5,8 +5,11 @@ namespace App\Entity;
 use App\Repository\ValidationRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 /**
  * @ORM\Entity(repositoryClass=ValidationRepository::class)
+ * @UniqueEntity(fields={"createdBy", "challenge"})
  */
 class Validation
 {
