@@ -22,7 +22,7 @@ class ChallengeFixtures extends Fixture implements DependentFixtureInterface
             $challenge = new Challenge();
 
             $name = $faker->sentence(3, false);
-            $description = $faker->text($faker->numberBetween(150, 300));
+            $description = $faker->text($faker->numberBetween(1000, 1500));
             $password = $faker->regexify('[A-Za-z]{6,10}');
             $reward = $faker->numberBetween(10, 50) * 10;
             $createdOn = $faker->dateTime();
