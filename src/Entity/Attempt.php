@@ -36,6 +36,11 @@ class Attempt
      */
     private $attempt;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $attemptedOn;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -73,6 +78,18 @@ class Attempt
     public function setAttempt(string $attempt): self
     {
         $this->attempt = $attempt;
+
+        return $this;
+    }
+
+    public function getAttemptedOn(): ?\DateTimeInterface
+    {
+        return $this->attemptedOn;
+    }
+
+    public function setAttemptedOn(\DateTimeInterface $attemptedOn): self
+    {
+        $this->attemptedOn = $attemptedOn;
 
         return $this;
     }

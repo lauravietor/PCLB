@@ -1,0 +1,67 @@
+
+> watch
+> encore dev --watch
+
+Running webpack ...
+
+ DONE  Compiled successfully in 2859ms13:35:23
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...13:49:29
+
+ DONE  Compiled successfully in 140ms13:49:29
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...13:50:15
+
+ DONE  Compiled successfully in 123ms13:50:16
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...13:51:33
+
+ DONE  Compiled successfully in 206ms13:51:33
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...13:54:24
+
+ DONE  Compiled successfully in 139ms13:54:25
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.7 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...14:08:47
+
+ DONE  Compiled successfully in 97ms14:08:47
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...14:33:10
+
+ DONE  Compiled successfully in 63ms14:33:10
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...15:41:15
+
+ DONE  Compiled successfully in 86ms15:41:15
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
+ WAIT  Compiling...15:56:43
+
+ DONE  Compiled successfully in 66ms15:56:44
+
+12 files written to public/build
+Entrypoint app [big] 3.5 MiB (237 KiB) = runtime.js 14.6 KiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.css 1.54 MiB vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_adminbsb-materialdesi-42df30.js 1.92 MiB app.css 390 bytes app.js 21.3 KiB 6 auxiliary assets
+webpack compiled successfully
