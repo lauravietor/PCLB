@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Controller;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+use App\Entity\User;
+
+class LeaderboardController extends AbstractController
+{
+    /**
+     * @Route("/leaderboard", name="leaderboard")
+     */
+    public function index(): Response
+    {
+        $repo = $this->getDoctrine()->getRepository(User::class);
+
+        $users = $repo->findAll();
+
+        usort($users, function ($user1, $user2) {
+            return $user2->getScore() - $user1->getScore();
+        });
+
+        return $this->render('pages/leaderboard.html.twig', [
+            'users' => $users
+        ]);
+    }
+}
+

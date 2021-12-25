@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block titre_page %}Leaderboard{% endblock %}
+
+{% block content %}
+    <table>
+      <tr>
+        <th>Position</th>
+        <th>Nom d'utilisateur</th>
+        <th>Score</th>
+      </tr>
+    {% for user in users %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.score }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

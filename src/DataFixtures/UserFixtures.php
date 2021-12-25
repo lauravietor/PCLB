@@ -35,15 +35,15 @@ class UserFixtures extends Fixture
             $username = $firstName[0] . $lastName;
             $email = "{$firstName}.{$lastName}@centrale-marseille.fr";
 
-            $roles = ["user"];
+            $roles = ['ROLE_USER'];
             if($i == 1) {
-                $roles = array_merge($roles, ["admin"]);
+                $roles = array_merge($roles, ['ROLE_ADMIN']);
             }
 
             $user->setUsername($username)
                  ->setEmail($email)
                  ->setPassword($faker->regexify('[A-Za-z0-9_-]{8,32}'))
-                 ->setScore($faker->numberBetween())
+                 ->setScore($faker->numberBetween(0, 100) * 10)
                  ->setRoles($roles);
 
             $manager->persist($user);

@@ -1,12 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block titre_page %}Liste des challenges{% endblock %}
+{% block titre_page %}Challenges{% endblock %}
 
 {% block content %}
+    <table>
+      <tr>
+        <th>Nom</th>
+        <th>Difficulté</th>
+        <th>Récompense</th>
+      </tr>
     {% for challenge in challenges %}
-        <h2>{{ challenge.name }}</h2>
-        <p>{{ challenge.description }}</p>
-        <p>Difficulté : {{ challenge.difficulty }}/10</p>
-        <p>Récompense : {{ challenge.reward }} points</p>
+      <tr>
+        <td>{{ challenge.name }}</td>
+        {# <p>{{ challenge.description }}</p> #}
+        <td>{{ challenge.difficulty }}/10</td>
+        <td>{{ challenge.reward }} points</td>
+      </tr>
     {% endfor %}
+    </table>
 {% endblock %}

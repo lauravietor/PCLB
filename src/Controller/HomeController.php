@@ -8,10 +8,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use App\Entity\Challenge;
 
-class ChallengesController extends AbstractController
+class HomeController extends AbstractController
 {
     /**
-     * @Route("/challenges", name="challenges")
+     * @Route("/home", name="homepage")
      */
     public function index(): Response
     {
@@ -19,11 +19,7 @@ class ChallengesController extends AbstractController
 
         $challenges = $repo->findAll();
 
-        usort($challenges, function ($c1, $c2) {
-            return $c1->getDifficulty() - $c2->getDifficulty();
-        });
-
-        return $this->render('pages/challenges.html.twig', [
+        return $this->render('pages/home.html.twig', [
             'challenges' => $challenges
         ]);
     }
