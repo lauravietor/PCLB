@@ -11,7 +11,7 @@ use App\DataFixtures\UserFixtures;
 use App\DataFixtures\ChallengeFixtures;
 use App\Entity\Validation;
 
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
 
 class ValidationFixtures extends Fixture implements DependentFixtureInterface
 {
@@ -29,6 +29,11 @@ class ValidationFixtures extends Fixture implements DependentFixtureInterface
             $challengesQuery = $manager->createQuery('SELECT c FROM App\Entity\Challenge c');
             $challenges = $challengesQuery->getResult();
             $challenge = $faker->randomElement($challenges);
+
+            $curr_score = $createdBy->getScore();
+            $chall_reward = $challenge->getReward();
+
+            $createdBy->setScore($curr_score + $chall_reward);
 
             $challengeDate = $challenge->getCreatedOn();
 

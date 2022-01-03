@@ -6,7 +6,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
 
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
 
 function formatName(string $nameToFormat): String
 {
@@ -42,8 +42,8 @@ class UserFixtures extends Fixture
 
             $user->setUsername($username)
                  ->setEmail($email)
-                 ->setPassword($faker->regexify('[A-Za-z0-9_-]{8,32}'))
-                 ->setScore($faker->numberBetween(0, 100) * 10)
+                 ->setPassword($username . "123")
+                 ->setScore(0)
                  ->setRoles($roles);
 
             $manager->persist($user);

@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    margin-bottom: 0; /* Margin bottom by footer height */
+    margin-bottom: 40px; /* Margin bottom by footer height */
     background-color: lightgray;
 }
 
@@ -23,6 +23,9 @@ body {
         line-height: 20px;
     }
 
+    body {
+        margin-bottom: 20px;
+    }
 }
 
 .footer-content{
