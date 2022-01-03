@@ -6,8 +6,6 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
 
-// require_once 'vendor/autoload.php';
-
 function formatName(string $nameToFormat): String
 {
     return strtolower(strtr(iconv("UTF-8", "ASCII//TRANSLIT", $nameToFormat), ' ', '-'));

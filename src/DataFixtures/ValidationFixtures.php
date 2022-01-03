@@ -11,8 +11,6 @@ use App\DataFixtures\UserFixtures;
 use App\DataFixtures\ChallengeFixtures;
 use App\Entity\Validation;
 
-// require_once 'vendor/autoload.php';
-
 class ValidationFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void

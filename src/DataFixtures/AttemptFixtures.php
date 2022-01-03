@@ -11,8 +11,6 @@ use App\DataFixtures\UserFixtures;
 use App\DataFixtures\ChallengeFixtures;
 use App\Entity\Attempt;
 
-// require_once 'vendor/autoload.php';
-
 class AttemptFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
