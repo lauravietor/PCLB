@@ -3,19 +3,16 @@
 {% block titre_page %}Challenges{% endblock %}
 
 {% block content %}
-    <table>
-      <tr>
-        <th>Nom</th>
-        <th>Difficulté</th>
-        <th>Récompense</th>
-      </tr>
     {% for challenge in challenges %}
-      <tr>
-        <td>{{ challenge.name }}</td>
-        {# <p>{{ challenge.description }}</p> #}
-        <td>{{ challenge.difficulty }}/10</td>
-        <td>{{ challenge.reward }} points</td>
-      </tr>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="card">
+        <div class="header"><h2>{{ challenge.name }}</h2></div>
+        <div class="body">
+        {{ challenge.difficulty }}/10
+        {{ challenge.reward }} points
+        </div>
+      </div>
+    </div>
     {% endfor %}
     </table>
 {% endblock %}

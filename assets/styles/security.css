@@ -1,0 +1,15 @@
+section.main {
+    margin-top: 100px;
+}
+
+div.card {
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.no-margin {
+    margin: 0px !important;
+}

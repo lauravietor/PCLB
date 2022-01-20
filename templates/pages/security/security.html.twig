@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="Content-Type" content="UTF-8">
+        <meta name="Content-Language" content="fr">
+        <meta name="Description" content="GInfo - Association d'informatique de Centrale Marseille">
+        <meta name="Keywords" content="ginfo, groupe, informatique, it, association">
+        <meta name="Copyright" content="GINFO">
+        <meta name="Revisit-After" content="15 days">
+
+        <title>PCLB - {% block titre_page %}Base{% endblock %}</title>
+
+        <link rel="icon" type="image/png" href="{{ asset('build/images/favicon.png') }}" />
+
+        {% block page_css %}
+        {% endblock %}
+        {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('security') }}
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+
+        {% block page_js %}
+        {% endblock %}
+        {{ encore_entry_script_tags('app') }}
+    </head>
+
+    <body {% block additionnal_body_block %}{% endblock %} class="theme-{% block theme_color %}indigo{% endblock %} {% block additionnal_body_class %}{% endblock %}">
+
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    {% if is_granted('ROLE_USER') %}
+                        {% block mobile_collapse %}
+                            <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                        {% endblock %}
+                        <a href="javascript:void(0);" class="bars"></a>
+                    {% endif %}
+
+                    <a class="navbar-brand" href="/home">
+                        GINFO
+                    </a>
+
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if is_granted('ROLE_USER') %}
+                            <li>
+                                <a href="">
+                                    <i class="material-icons">settings</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ path('user_logout') }}">
+                                    <i class="material-icons">power_settings_new</i>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="main">
+            <div class="container-fluid">
+                {% block form %}
+                {% endblock %}
+            </div>
+        </section>
+    </body>
+</html>

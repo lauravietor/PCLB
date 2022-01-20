@@ -5449,16 +5449,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.4.34",
+            "version": "v4.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "18d4a6695b7daec4e62c31cede8cadc17499919b"
+                "reference": "ea53c7fc357a330e7d865ed1bf2d3583f462e3f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/18d4a6695b7daec4e62c31cede8cadc17499919b",
-                "reference": "18d4a6695b7daec4e62c31cede8cadc17499919b",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/ea53c7fc357a330e7d865ed1bf2d3583f462e3f5",
+                "reference": "ea53c7fc357a330e7d865ed1bf2d3583f462e3f5",
                 "shasum": ""
             },
             "require": {
@@ -5538,7 +5538,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-03T10:04:43+00:00"
+            "time": "2021-11-25T16:40:00+00:00"
         },
         {
             "name": "symfony/security-core",

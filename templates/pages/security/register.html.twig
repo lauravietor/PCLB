@@ -1,0 +1,35 @@
+{% extends "pages/security/security.html.twig" %}
+
+{% form_theme form 'form/bootstrap_3_layout.html.twig' %}
+
+{% block titre_page %}Inscription{% endblock %}
+
+{% block form %}
+    <main class="col-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+        <div class="card">
+            <div class="header text-center">
+                <h1>Inscription</h1>
+            </div>
+
+            <div class="body">
+                {{ form_start(form) }}
+                <div class="row">
+                    <div class="no-margin col-md-6">
+                        {{ form_row(form.firstName, { label : "Prénom" }) }}
+                    </div>
+                    <div class="no-margin col-md-6">
+                        {{ form_row(form.lastName, { label : "Nom de famille"}) }}
+                    </div>
+                </div>
+                {{ form_row(form.username, { label : "Nom d'utilisateur" }) }}
+                {{ form_row(form.email, { label : "Adresse email" }) }}
+                {{ form_row(form.password, { label : "Mot de passe" }) }}
+                {{ form_row(form.confirm_password, {label : "Confirmez votre mot de passe" }) }}
+                {{ form_row(form._token, { label_attr : { hidden:"hidden" } }) }}
+                <button type="submit" class="btn btn-success center-block">Valider</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

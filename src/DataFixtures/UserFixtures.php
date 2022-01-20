@@ -2,6 +2,8 @@
 
 namespace App\DataFixtures;
 
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\User;
@@ -13,6 +15,12 @@ function formatName(string $nameToFormat): String
 
 class UserFixtures extends Fixture
 {
+    private $passwordEncoder;
+
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $this->passwordEncoder = $passwordEncoder;
+    }
     public function load(ObjectManager $manager): void
     {
         $faker = \Faker\Factory::create('fr_FR');
@@ -35,12 +43,15 @@ class UserFixtures extends Fixture
 
             $roles = ['ROLE_USER'];
             if($i == 1) {
-                $roles = array_merge($roles, ['ROLE_ADMIN']);
+                $roles[] = 'ROLE_ADMIN';
             }
 
             $user->setUsername($username)
                  ->setEmail($email)
-                 ->setPassword($username . "123")
+                 ->setPassword($this->passwordEncoder->encodePassword(
+                     $user,
+                     $username . '123'
+                 ))
                  ->setScore(0)
                  ->setRoles($roles);
 

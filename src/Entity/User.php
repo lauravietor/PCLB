@@ -10,15 +10,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
  * @ORM\Table(name="`user`")
- * @UniqueEntity("email")
- * @UniqueEntity("username")
- * @UniqueEntity(fields={"firstName","lastName"})
+ * @UniqueEntity("email", message="Cette adresse email est déjà utilisée par un autre utilisateur.")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id
@@ -40,8 +39,14 @@ class User
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=8, minMessage="Votre mot de passe doit être composé d'au moins {{ limit }} caractères.")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Est différent du mot de passe.")
+     */
+    private $confirmPassword;
 
     /**
      * @ORM\Column(type="json")
@@ -122,6 +127,18 @@ class User
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    public function getConfirmPassword(): ?string
+    {
+        return $this->confirmPassword;
+    }
+
+    public function setConfirmPassword(string $confirmPassword): self
+    {
+        $this->confirmPassword = $confirmPassword;
 
         return $this;
     }
@@ -262,5 +279,15 @@ class User
         }
 
         return $this;
+    }
+
+    public function getSalt()
+    {
+
+    }
+
+    public function eraseCredentials()
+    {
+
     }
 }

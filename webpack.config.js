@@ -22,6 +22,8 @@ Encore
      */
     .addEntry('app', './assets/app.js')
 
+    .addEntry('security', './assets/security.js')
+
 //     enables scss
 //     .createSharedEntry('vendor', './assets/js/vendor.js')
 
