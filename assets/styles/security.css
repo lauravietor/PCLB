@@ -1,9 +1,9 @@
-section.main {
-    margin-top: 100px;
-}
-
 div.card {
     border-radius: 20px;
+}
+
+div.card > div.header {
+    border-radius: 20px 20px 0px 0px;
 }
 
 h1 {
