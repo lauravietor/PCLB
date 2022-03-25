@@ -74,11 +74,13 @@
                                 <i class="material-icons">home</i> <span>Accueil</span>
                             </a>
                         </li>
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                         <li {% if app.request.pathInfo starts with "/leaderboard" %}class="active"{% endif %}>
                             <a href="/leaderboard" id="link_add">
                                 <i class="material-icons">add</i> <span>Leaderboard</span>
                             </a>
                         </li>
+                        {% endif %}
                         <li {% if app.request.pathInfo starts with "/challenges" %}class="active"{% endif %}>
                             <a href="/challenges" id="link_add">
                                 <i class="material-icons">add</i> <span>Challenges</span>

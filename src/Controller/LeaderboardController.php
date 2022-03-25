@@ -8,6 +8,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use App\Entity\User;
 
+/**
+ * Require authentification to see other users
+ *
+ * @IsGranted("IS_AUTHENTICATED_REMEMBERED")
+ */
 class LeaderboardController extends AbstractController
 {
     /**
