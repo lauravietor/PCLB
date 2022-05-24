@@ -56,6 +56,14 @@
                             <li>
                                 <a href="{{ path('security_logout') }}">
                                     <i class="material-icons">power_settings_new</i>
+                                    <span>Inscription</span>
+                                </a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a href="{{ path('security_login') }}">
+                                    <i class="material-icons">power_settings_new</i>
+                                    <span>Connexion</span>
                                 </a>
                             </li>
                         {% endif %}
@@ -100,7 +108,7 @@
 
         <div class="footer">
             <div class="footer-content">
-                <b>GInfo</b> 2019 - <a href="https://assos.centrale-marseille.fr/ginfo">GInfo</a> -
+                <b>GInfo</b> 2022 - <a href="https://assos.centrale-marseille.fr/ginfo">GInfo</a> -
                 <a href="">Mentions légales</a> - <a href="">Données personnelles</a> - <a href="https://wiki.centrale-marseille.fr/ginfo/">Documentation</a>
             </div>
         </div>

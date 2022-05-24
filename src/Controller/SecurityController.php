@@ -124,7 +124,7 @@ class SecurityController extends AbstractController
 
             }
 
-            // Redirection vers l'accueil
+            // Redirection vers la page de connexion
             return $this->redirectToRoute('security_login');
         }
 
