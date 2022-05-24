@@ -10,6 +10,11 @@ h1 {
     font-size: 2em;
 }
 
+section.content {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .no-margin {
     margin: 0px !important;
 }
